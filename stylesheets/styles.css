@@ -534,6 +534,7 @@ body {
   font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f0e7d5;
   font-weight: normal;
+  /*
   background: #252525;
   background-attachment: fixed !important;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a2a29), color-stop(100%, #1c1c1c));
@@ -542,6 +543,9 @@ body {
   background: -o-linear-gradient(#2a2a29, #1c1c1c);
   background: -ms-linear-gradient(#2a2a29, #1c1c1c);
   background: linear-gradient(#2a2a29, #1c1c1c);
+  */
+  background-image:url('../images/background.jpg');
+  background-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -605,6 +609,7 @@ strong {
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
+  background: #000000;
 }
 
 section img {
