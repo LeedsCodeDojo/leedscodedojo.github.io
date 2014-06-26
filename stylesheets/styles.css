@@ -855,3 +855,13 @@ IMG.centred {
     margin-left: auto;
     margin-right: auto 
 }
+
+figure .image {
+    width: 100%;
+}
+
+figure {
+    text-align: center;
+    display: table;
+    margin: 10px auto; /* not needed unless you want centered */
+}
