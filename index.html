@@ -1,121 +1,175 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Leeds Code Dojo</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="SHORTCUT ICON" href="images/favicon.ico">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="">
+    <title></title>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Gallery Viewer -->
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+        <div class="rg-image-wrapper">
+            {{if itemsCount > 1}}
+                <div class="rg-image-nav">
+                    <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                    <a href="#" class="rg-image-nav-next">Next Image</a>
+                </div>
+            {{/if}}
+            <div class="rg-image"></div>
+            <div class="rg-loading"></div>
+            <div class="rg-caption-wrapper">
+                <div class="rg-caption" style="display:none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </script>
 </head>
 <body>
-    <div class="wrapper">
-
-        <section>
-            <div id="title">
-                <div>
-                    <div style="float:left;width:115px">
-                        <img src="images/logo.jpg" />
-                    </div>
-
-                    <div style="float:right;">
-                        <img src="images/cclogo.png" />
-                    </div>
-                    <div>
-                        <h1>Leeds Code Dojo</h1>
-                        <p>Less talk, more code</p>
-                    </div>
-                </div>
-                <hr>
-                <!--
-                    <span class="credits left">Brought to you by <a href="https://www.callcredit.co.uk/">Callcredit Information Group</a></span>
-                    <span class="credits right">See the <a href="https://github.com/LeedsCodeDojo">github repository</a></span>
-                -->
-            </div>
-
-            <h2>What?</h2>
-
-            <p>Leeds Code Dojo is a group dedicated to programming.  We focus on practical coding sessions, where you can learn by doing.</p>
-
-            <p>
-                Want to have some fun coding in a relaxed and friendly environment? Interested in self-improvement through deliberate practice? Want to see what you can learn from fellow programmers, and teach them what you know? Then Leeds Code Dojo is for you!
-            </p>
-
-            <figure>
-                <img src='images/dojo multi.png' alt='A dojo in action' />
-                <figcaption>A dojo in action</figcaption>
-            </figure>
-
-            <br/>
-            <p>From newbie Node coders to hardcore Haskell hackers, and all the levels of C#, Java, Ruby, Python or F# inbetween, all languages and abilities are welcome.</p>
-
-            <h2>When?</h2>
-
-            <h4>Next: Refuctoring - Wednesday 3rd December</h4>
-
-            <p>Details to come - please <a href="http://www.meetup.com/Leeds-Code-Dojo/events/218618851/"> see meetup</a> for further info and to register.</p>
-
-            <h4>Previous: The Pipe Packing Challenge - Thursday 6th November</h4>
-
-            <p>
-                In a coding session that took inspiration from the last <a href="http://www.meetup.com/Leeds-Sharp/events/199532112/">leeds sharp session</a>, five pairs of us wrote algorithms to try and solve a simplified version of the <a href="http://en.wikipedia.org/wiki/Bin_packing_problem">bin packing problem.</a></p>
-            <p>
-                There were once again many languages in effect - Erlang, F#, C# and Haskell - and all of the pairs had a working solution by the end.  Most ended up with a 'First Fit' algorithm, which does a pretty good job of finding a solution to this NP-Hard problem without taking the age of the universe to run..
-            </p>
-
-            <p>
-                Most of the <a href="https://github.com/LeedsCodeDojo/PipePacking">solutions are up on github</a> - go check them out!
-            </p>
-
-            <h4>Previous: Build you a Skynet - Wednesday 1st October</h4>
-
-            <p>
-                We worked in twos and threes to write Machine Learning algorithms based on the k-nearest neighbours algorithm.  The group did well, with almost everyone getting a working solution, and some teams getting to over 90% accuracy with their digit classification!
-            </p>
-            <p>
-                As usual, there were several languages in use - F#, Objective C, Scala, C#, and Python, and again a few people got involved with a new language, so well done to them.
-            </p>
-
-            <figure>
-                <img src='images/skynet2.jpg' alt='Coders at work' />
-                <figcaption>The LCD crew uder the watchful eye of a T-800</figcaption>
-            </figure>
-
-            <br />
-            
-            <p>
-                Some of the <a href="https://github.com/LeedsCodeDojo/DigitRecogniser">solutions are up on github</a> - go check them out!
-            </p>
-
-            <h2>Where?</h2>
-
-            <p>
-                Callcredit Information Group, One Park Lane, LS3 1EP
-            </p>
-
-            <div id="map">
-                <iframe class="centred" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18851.32440154755!2d-1.558164!3d53.799889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795ea6ed23da83%3A0x74fefa4bca838ba4!2s1+Park+Lane!5e0!3m2!1sen!2sus!4v1403794265883" width="400" height="300" frameborder="0" style="border:0"></iframe>
-            </div>
-
-            <p>
-                It's the big grey/glass building at the corner of Park Lane, just off the A58. The <a href="http://www.callcredit.co.uk/contact-us/find-us"> find us page </a> has more information (see 'head office' ).
-            </p>
-
-            <h3>We hope to see you there!</h3>
-
-            <a class="follow-me" href="http://twitter.com/LeedsCodeDojo"><img class="centred" src="images/twitter.jpg" /></a>
-        </section>
+<header>
+    <div class="containContent ident-section">
+        <h1 class="home-link" title="Home">Leeds Code Dojo</h1>
+        <h2 class="strap-line f-right" title="Strapline">Less Talk More Code</h2>
     </div>
+</header>
+<section class="mainIdent">
+    <img src="images/overlay.png" id="mainIdentImage" alt="Dojo Illustration" />
+</section>
+<section class="subHeader">
+    <div class="containContent">
+        <h3 class="sub-heading" title="What?!..."><img src="images/text-what.gif" alt="What?!..." /></h3>
+        <h4>Leeds Code Dojo is a group dedicated to programming. We focus on practical coding sessions, where you can learn by doing.</h4>
+        <h5>Want to have some fun coding in a relaxed and friendly environment? Interested in self-improvement through deliberate practice? Want to see what you can learn from fellow programmers, and teach them what you know? Then Leeds Code Dojo is for you!</h5>
+        <h5>From newbie Node coders to hardcore Haskell hackers, and all the levels of C#, Java, Ruby, Python or F# inbetween, all languages and abilities are welcome.</h5>
+    </div>
+</section>
+<section class="content">
+    <div class="containContent">
+        <div class="content-article article-left">
+            <h6 title="When: Previous"><img src="images/text-when-previous.gif" alt="When: Previous" /></h6>
+            <p class="date-heading">The Pipe Packing Challenge - Thursday 6th November</p>
+            <!--img src="images/event/skynet2.jpg" class="event-image" /-->
+            <p>In a coding session that took inspiration from the last <a href="http://www.meetup.com/Leeds-Sharp/events/199532112/">leeds sharp session</a>, five pairs of us wrote algorithms to try and solve a simplified version of the <a href="http://en.wikipedia.org/wiki/Bin_packing_problem">bin packing problem.</a></p>
+            <p>There were once again many languages in effect - Erlang, F#, C# and Haskell - and all of the pairs had a working solution by the end.  Most ended up with a 'First Fit' algorithm, which does a pretty good job of finding a solution to this NP-Hard problem without taking the age of the universe to run..</p>
+            <p>Most of the <a href="https://github.com/LeedsCodeDojo/PipePacking">solutions are up on github</a> - go check them out!</p>
 
+            <p class="date-heading">Build you a Skynet - Wednesday 1st October</p>
+            <img src="images/event/skynet2.jpg" class="event-image" />
+            <p>We worked in twos and threes to write Machine Learning algorithms based on the k-nearest neighbours algorithm.  The group did well, with almost everyone getting a working solution, and some teams getting to over 90% accuracy with their digit classification!</p>
+            <p>There were several languages in use - F#, Objective C, Scala, C#, and Python, and again a few people got involved with a new language, well done to them.</p>
+            <p>Have a look at some of the <a href="https://github.com/LeedsCodeDojo/DigitRecogniser">solutions on github</a>.</p>
 
+            <a href="archive.html" class="events-archive"><img src="images/text-events-archive.gif" alt="Events: Archive" /></a>
+        </div>
+        <div class="content-article article-right">
+            <h6 title="When: Next"><img src="images/text-when-next.gif" alt="When: Next" /></h6>
+            <p class="date-heading">Refuctoring - Wednesday 3rd December</p>
+
+            <p>In this session, you are going to create some of the best-written, cleanest code you've ever seen.  Then, one small step at a time, you're going to utterly destroy it!</p>
+            <p>You may be familiar with Refactoring, by which you try to eliminate 'smells' in your code and make it gradually better.  <a href="http://www.waterfall2006.com/gorman.html"> Refuctoring</a> is the exact opposite, whereby you try to identify and remove 'smiles' in your code in the hope of making it almost impossible to read.  As Jason Gorman, who coined the phrase, puts it:</p>
+            <p>"Refuctoring is the process of taking a well-designed piece of code and, through a series of small, reversible changes, making it completely unmaintainable by anybody except yourself. Comprehensive regression testing guarantees that nobody will be any the wiser."</p>
+            <p>The hope is that in studying the ways in which code can be made worse, you will learn to appreciate and improve your ability to make it better.  And even if you don't, you're guaranteed to have some fun!  There may even be a prize for the pair with the worst-looking code.</p>
+            <p>Doors are open from 18:00, and the night will kick off at 18:30 with food and socialising.  We'll get started on the coding around 19:00, coding up a simple solution in pairs using TDD before the real fun begins...</p>
+            <p>You'll be using whatever languages you have available - so bring your laptop, if you have one, with your language of choice installed including some way of running unit tests.  We are very limited in power sockets, so make sure your battery is fully charged!</p>
+            <p>This night is suitable for any level of experience, but you do need to have some knowledge of programming.</p>
+            <p>We'll finish up around 21:00, and more than likely head to the pub afterwards.</p>
+            <p>Please <a href="http://www.meetup.com/Leeds-Code-Dojo/events/218618851/"> register on meetup</a> if you'd like to attend.</p>
+            <p>Hope to see you there!</p>
+        </div>
+        <span class="dotted-line-break c-both"></span>
+                <div id="rg-gallery" class="rg-gallery">
+                    <div class="rg-thumbs">
+                        <!-- Elastislide Carousel Thumbnail Viewer -->
+                        <div class="es-carousel-wrapper">
+                            <div class="es-nav">
+                                <span class="es-nav-prev">Previous</span>
+                                <span class="es-nav-next">Next</span>
+                            </div>
+                            <div class="es-carousel">
+                                <ul>
+                                    <li><a href="#"><img src="images/event/thumbs/event1.jpg" data-large="images/event/event1.jpg" alt="image01" data-description="The Dojo opens" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/pizza.jpg" data-large="images/event/pizza.jpg" alt="image02" data-description="Pre-Dojo Chat & Pizza" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/skynet2.jpg" data-large="images/event/skynet2.jpg" alt="image03" data-description="The LCD crew under the watchful eye of a T-800" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/beard.jpg" data-large="images/event/beard.jpg" alt="image04" data-description="Beard-powered coding" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/haskell.jpg" data-large="images/event/haskell.jpg" alt="image05" data-description="Some crazy moon-language called haskell" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/scores.jpg" data-large="images/event/scores.jpg" alt="image06" data-description="Code Golf scores" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/adam_pres.jpg" data-large="images/event/adam_pres.jpg" alt="image07" data-description="Adam showing off his code" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/group.jpg" data-large="images/event/group.jpg" alt="image08" data-description="Coders hard at work" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/eleanor.jpg" data-large="images/event/eleanor.jpg" alt="image09" data-description="A couple of LCD regulars" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/touchscreen.jpg" data-large="images/event/touchscreen.jpg" alt="image10" data-description="Is this a touchscreen?" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/presentation.jpg" data-large="images/event/presentation.jpg" alt="image11" data-description="Another code walkthrough" /></a></li>
+                                    <li><a href="#"><img src="images/event/thumbs/rachael_gordon.jpg" data-large="images/event/rachael_gordon.jpg" alt="image12" data-description="Another pairing sesion in progress" /></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Elastislide Carousel Thumbnail Viewer -->
+                    </div><!-- rg-thumbs -->
+                </div><!-- rg-gallery -->
+        <span class="dotted-line-break c-both"></span>
+        <a href="https://twitter.com/LeedsCodeDojo"><img src="images/text-twitter.gif" class="follow-twitter f-right" alt="Follow us on Twitter" /></a>
+            <h6 title="Where" class="h6-where"><img src="images/text-where.gif" alt="Where" /></h6>
+            <p class="date-heading">Callcredit Information Group, One Park Lane, LS3 1EP</p>
+            <p>It’s the big grey/glass building at the corner of Park Lane, just off the A58. <a href="http://www.callcredit.co.uk/contact-us/find-us">The find us page</a> has more information (see ‘head office’ ).</p>
+            <a href="https://twitter.com/LeedsCodeDojo" class="follow-2"><img src="images/text-twitter.gif" class="follow-twitter-2" alt="Follow us on Twitter" /></a>
+    </div>
+</section>
+<footer>
+    <div id="map"></div>
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 16,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(53.799937, -1.556245), //,
+
+            // How you would like to style the map.
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [	{
+                featureType:"all",
+                elementType:"all",
+                stylers:[
+                    {			invert_lightness:true	},
+                    {			saturation: -100		},
+                    {			lightness:15		},
+                    {			gamma: 0.6		},
+                    {			hue:"#FF3300"		},
+                ]
+            }
+            ]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using out element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
 </body>
 </html>

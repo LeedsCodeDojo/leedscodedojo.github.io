@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="">
+    <title></title>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Gallery Viewer -->
+    <link href="gallery/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" />
+    <script src="gallery/js/jquery.galleryview-3.0-dev.js"></script>
+    <script src="gallery/js/jquery.timers-1.2.js"></script>
+</head>
+<body class="archive-page">
+<header>
+    <div class="containContent ident-section">
+        <a href="index.html"><h1 class="home-link" title="Home">Leeds Code Dojo</h1></a>
+        <h2 class="strap-line f-right" title="Strapline">Less Talk More Code</h2>
+    </div>
+</header>
+<section class="mainIdent">
+    <img src="images/overlay.png" id="mainIdentImage" alt="Dojo Illustration" />
+</section>
+<section class="subHeader">
+    <div class="containContent">
+        <p><img src="images/event-archive.gif" title="Event Archive" class="archive-title" /></p>
+    </div>
+</section>
+<section class="content">
+    <div class="containContent">
+        <div class="content-article">
+
+            <!-- archive event -->
+            <img src="images/event/event1.jpg" class="event-image" />
+            <p class="date-heading">ARCHIVE: The Dojo opens: Wednesday 9th July!</p>
+            <p>"The first Leeds Code Dojo went really well – 17 people joined in, from a variety of different backgrounds and of various skill levels, so a great response. The Callcredit boardroom was pretty much at capacity, we might need to get a bigger room for the next one!</p>
+            <p>We worked in pairs on the ‘Kata Potter’ programming problem, practising the skills of TDD and Pair Programming. It was great to see a number of languages being used, including C#, F#, Ruby, Python, and PHP, with a few people trying out a new language for the first time.</p>
+            <p>Several of the solutions are up on github - go check them out!"</p>
+            <span class="dotted-line-break c-both"></span>
+            <!-- /archive event -->
+
+            <!-- archive event -->
+            <p class="date-heading">ARCHIVE: Fore! A nice round of Code Golf: Tuesday 5th August 2014</p>
+            <p>"In this session, we’ll be having a game of Code Golf, where the objective is to complete your program in as few (key)strokes as possible.</p>
+            <p>Throw caution and good programming practice to the wind in your quest for an ever-decreasing character count! Well-named variables? Not today my friend. Sensibly modularised code structure? Hell no! Comments? You must be kidding...</p>
+            <p>Although the main aim is to have fun, it’s also a great way to improve your language knowledge. Do you *really* need those parentheses? Is pattern matching more concise than an If? Isn’t there an operator that does this?!</p>
+            <p>All these questions and more will be asked, and hopefully answered, on the night.</p>
+            <p>Just bring your laptop if you have one, set up with our language of choice (including the ability to run unit tests). We’ll be working pairs, so don’t worry if you don’t have one.</p>
+            <p>Doors are open from 18:00, and the night will kick off at 18:30 with pizza and socialising. We’ll get started on the coding at 19:00, starting with a description of code golf and the problem we’ll be golfing. We’ll then code up our solutions (ideally with a few unit tests to show it works) before squeezing them down as small as they will go!</p>
+            <p>We’ll finish up around 21:00, and more than likely head to the pub afterwards."</p>
+            <span class="dotted-line-break c-both"></span>
+            <!-- /archive event -->
+
+        </div>
+
+
+
+        <a href="https://twitter.com/LeedsCodeDojo"><img src="images/text-twitter.gif" class="follow-twitter f-right" alt="Follow us on Twitter" /></a>
+            <h6 title="Where" class="h6-where"><img src="images/text-where.gif" alt="Where" /></h6>
+            <p class="date-heading">Callcredit Information Group, One Park Lane, LS3 1EP</p>
+            <p>It’s the big grey/glass building at the corner of Park Lane, just off the A58. <a href="http://www.callcredit.co.uk/contact-us/find-us">The find us page</a> has more information (see ‘head office’ ).</p>
+            <a href="https://twitter.com/LeedsCodeDojo" class="follow-2"><img src="images/text-twitter.gif" class="follow-twitter-2" alt="Follow us on Twitter" /></a>
+    </div>
+</section>
+<footer>
+    <div id="map"></div>
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 16,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(53.799937, -1.556245), //,
+
+            // How you would like to style the map.
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [	{
+                featureType:"all",
+                elementType:"all",
+                stylers:[
+                    {			invert_lightness:true	},
+                    {			saturation: -100		},
+                    {			lightness:15		},
+                    {			gamma: 0.6		},
+                    {			hue:"#FF3300"		},
+                ]
+            }
+            ]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using out element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+</script>
+</body>
+</html>
