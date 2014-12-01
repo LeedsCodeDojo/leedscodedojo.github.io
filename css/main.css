@@ -103,22 +103,22 @@ li { display: block }
 .containContent     { max-width: 1170px; margin: 0 auto; padding: 0 0.5em; }
 /* Top Section */
 header              { background: #FFF; }
-.ident-section      { padding: 0.5em 0 0.5em 0; display: block; }
+.ident-section      { padding: 0.1em 0 0.1em 0; display: block; }
 .ident-section h1,
-.ident-section h2   { display: inline-block; height: 87px; overflow: hidden; text-indent: -9999px; }
+.ident-section h2   { display: inline-block; height: 77px; overflow: hidden; text-indent: -9999px; }
 .ident-section h1   { width: 314px; background: url(../images/logo.png) 0 0 no-repeat; }
-.ident-section h2   { width: 276px; background: url(../images/logo_slogan.png) 0 0 no-repeat; }
+.ident-section h2   { width: 276px; background: url(../images/logo_slogan.png) 30px 0 no-repeat; }
 /* Main Image Section */
-.mainIdent          { position: relative; background: #FF3300; height: 487px; background: url(../images/image-bg.png) 0 0 repeat-x; text-align: center; }
+.mainIdent          { position: relative; background: #FF3300; height: 487px; background: url(../images/image-bg.png) 0 0 repeat-x; text-align: center; padding-top: 10px; }
 /*.mainIdent img      { position: relative; margin: 0.55em auto 0; max-width: 1661px; width: 100%; }*/
 .mainIdent img {
     position: relative;
-    bottom: -0.5em;
+    bottom: 0;
     /* left: 50%; */
     /* margin-left: -830px; */
     margin: 0 auto;
     width: 100%;
-    max-width: 1661px;
+    max-width: 1201px;
 
 }
 .subHeader          { background: #1F1E1E; text-align: center; color: #CDCDCD; padding: 0.5em 1em; }
@@ -129,10 +129,10 @@ header              { background: #FFF; }
 .content a, .content strong { color: #CDCDCD; font-weight: bold; }
 .content a:hover    { color: #FF5500; text-decoration: underline; }
 /*.content p a          { display: inline-block; background-color: #FF3300; padding: 0 4px 3px 4px; text-decoration: none; color: #353535; }*/
-.content-article    { width: 48%; }
+/*.content-article    { width: 48%; }*/
 .content-article .event-image { width: 100%; border: 3px solid #CDCDCD; margin: 0 0 0.5em; }
-.content-article.article-left          { float: left; }
-.content-article.article-right         { float: right; }
+/*.content-article.article-left          { float: left; }*/
+/*.content-article.article-right         { float: right; }*/
 .content h6 img     { width: 458px; height: 109px; }
 .content p.date-heading      { font-size: 0.8em; font-weight: bold; margin: 0 0 0.8em; color: #FF5500; }
 .content p                   { font-size: 0.65em; line-height: 1.5em; font-weight: normal; margin: 0 0 0.8em; }
