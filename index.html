@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <html>
 <head>
@@ -50,20 +50,6 @@
 </section>
 <section class="content">
     <div class="containContent">
-        <!--<div class="content-article article-left">-->
-            <!--<h6 title="When: Previous"><img src="images/text-when-previous.gif" alt="When: Previous" /></h6>-->
-            <!--<p class="date-heading">The Pipe Packing Challenge - Thursday 6th November</p>-->
-            <!--&lt;!&ndash;img src="images/event/skynet2.jpg" class="event-image" /&ndash;&gt;-->
-            <!--<p>In a coding session that took inspiration from the last <a href="http://www.meetup.com/Leeds-Sharp/events/199532112/">leeds sharp session</a>, five pairs of us wrote algorithms to try and solve a simplified version of the <a href="http://en.wikipedia.org/wiki/Bin_packing_problem">bin packing problem.</a></p>-->
-            <!--<p>There were once again many languages in effect - Erlang, F#, C# and Haskell - and all of the pairs had a working solution by the end.  Most ended up with a 'First Fit' algorithm, which does a pretty good job of finding a solution to this NP-Hard problem without taking the age of the universe to run..</p>-->
-            <!--<p>Most of the <a href="https://github.com/LeedsCodeDojo/PipePacking">solutions are up on github</a> - go check them out!</p>-->
-
-            <!--<p class="date-heading">Build you a Skynet - Wednesday 1st October</p>-->
-            <!--<img src="images/event/skynet2.jpg" class="event-image" />-->
-            <!--<p>We worked in twos and threes to write Machine Learning algorithms based on the k-nearest neighbours algorithm.  The group did well, with almost everyone getting a working solution, and some teams getting to over 90% accuracy with their digit classification!</p>-->
-            <!--<p>There were several languages in use - F#, Objective C, Scala, C#, and Python, and again a few people got involved with a new language, well done to them.</p>-->
-            <!--<p>Have a look at some of the <a href="https://github.com/LeedsCodeDojo/DigitRecogniser">solutions on github</a>.</p>-->
-        <!--</div>-->
         <div class="content-article article-right">
             <h6 title="When: Next"><img src="images/text-when-next.gif" alt="When: Next" /></h6>
             <p class="date-heading">Refuctoring - Wednesday 3rd December</p>
@@ -79,7 +65,7 @@
             <p>Please <a href="http://www.meetup.com/Leeds-Code-Dojo/events/218618851/"> register on meetup</a> if you'd like to attend.</p>
             <p>Hope to see you there!</p>
         </div>
-        <a href="archive.html" class="events-archive"><img src="images/text-events-archive.gif" alt="Events: Archive" /></a>
+        <a href="archive.html" class="events-archive"><img src="images/text-events-archive2.gif" onmouseover= src="images/text-events-archive2-highlight.gif" onmouseout= src="images/text-events-archive2.gif" alt="Events: Archive" /></a>
         <span class="dotted-line-break c-both"></span>
         <div id="rg-gallery" class="rg-gallery">
             <div class="rg-thumbs">
@@ -128,12 +114,15 @@
     function init() {
         // Basic options for a simple Google Map
         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+
+        var officeLatLng = new google.maps.LatLng(53.7994, -1.556245);
+
         var mapOptions = {
             // How zoomed in you want the map to start at (always required)
             zoom: 16,
 
             // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(53.799937, -1.556245), //,
+            center: officeLatLng, //,
 
             // How you would like to style the map.
             // This is where you would paste any style found on Snazzy Maps.
@@ -159,9 +148,9 @@
         var map = new google.maps.Map(mapElement, mapOptions);
 
         var marker = new google.maps.Marker({
-            position: myLatlng,
+            position: officeLatLng,
             map: map,
-            title: 'Hello World!'
+            title: 'Callcredit Information Group'
         });
     }
 </script>
