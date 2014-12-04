@@ -134,6 +134,17 @@ header              { background: #FFF; }
 /*.content-article.article-left          { float: left; }*/
 /*.content-article.article-right         { float: right; }*/
 .content h6 img     { width: 458px; height: 109px; }
+
+.content-article h6 { margin-right: 300px; }
+
+.content .call-to-action.narrow-version    { display: none; }
+.content .call-to-action     { margin-top: 50px; display: inline-block; width: auto; padding: 15px 20px 20px; border: 2px solid #FF5500; float: right; text-decoration: none; color: #FF5500; }
+.content .call-to-action:hover     { text-decoration: none; }
+/*Animation Prefs*/
+@-webkit-keyframes pulse    { 100% {border-color: #FFFFFF; color: #FFFFFF; }}
+@keyframes pulse            { 100% {border-color: #FFFFFF; color: #FFFFFF; }}
+.content .call-to-action    { -webkit-animation: pulse 2s infinite alternate; animation: pulse 2s infinite alternate; }
+
 .content p.date-heading      { font-size: 0.8em; font-weight: bold; margin: 0 0 0.8em; color: #FF5500; }
 .content p                   { font-size: 0.65em; line-height: 1.5em; font-weight: normal; margin: 0 0 0.8em; }
 
@@ -158,6 +169,12 @@ and (max-width : 970px) {
     .content .events-archive img {max-width: 100%; height: auto; }
 }
 @media only screen
+and (max-width : 770px) {
+    .content .call-to-action.wide-version    { display: none; }
+    .content .call-to-action.narrow-version    { display: inline-block; margin-top: 0; }
+    .content-article h6 { margin-right: 0; }
+}
+@media only screen
 and (max-width : 690px) {
     .follow-twitter { display: none; }
     .follow-2       { display: block; text-align: center; }
@@ -175,6 +192,8 @@ and (max-width : 615px) {
     .content-article .event-image, .archive-page .content-article .event-image { max-width: calc(100% - 0.3em); float: none; margin-left: 0; }
     .content-article.article-left { border-bottom: 2px dashed #CDCDCD; margin-bottom: 0.9em }
     .content h6 { max-width: 100%; }
+
+    .content .call-to-action.narrow-version    { display: inline-block; margin-top: 0; float: none; width: calc(100% - 44px); text-align: center; margin: 10px 0 20px; }
 }
 footer { background: #353535; text-align: center; height: 80%;  }
 
