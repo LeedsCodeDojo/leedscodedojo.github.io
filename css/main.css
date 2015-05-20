@@ -369,3 +369,7 @@ footer { background: #353535; text-align: center; height: 80%;  }
 .es-nav span:hover{
     opacity:1.0;
 }
+
+.list {
+    text-indent: 20px;
+}
